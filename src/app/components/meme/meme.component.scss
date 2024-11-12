@@ -1,0 +1,103 @@
+/* src/app/meme.component.scss */
+
+/* Center the meme-container */
+.meme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 64px); /* Adjust if you have a header/footer */
+  padding: 20px;
+}
+
+/* Style the mat-card */
+.card {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Center the content inside mat-card-content */
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the meme-image horizontally */
+}
+
+/* Style the meme-image */
+.meme-image {
+  position: relative;
+  display: inline-block;
+  border: 5px solid black;
+  margin: 0 auto; /* Centers the meme-image within mat-card-content */
+}
+
+/* Image styles */
+.meme-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Caption styles */
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 10px;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 999;
+  line-height: 30px;
+}
+
+.top-caption {
+  top: 10px;
+}
+
+.bottom-caption {
+  bottom: 10px;
+}
+
+/* Watermark styles */
+
+.watermark {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: rgba(255, 255, 255, 0.5); /* Increase transparency */
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjust shadow transparency */
+  pointer-events: none;
+}
+
+/* Center the loading spinner */
+mat-progress-spinner {
+  margin: 20px auto;
+  display: block;
+}
+
+/* Ensure mat-card takes full width */
+mat-card {
+  width: 100%;
+}
+
+.mat-mdc-card-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 8px;
+    justify-content: space-around;
+}
+
+.mat-mdc-card-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}

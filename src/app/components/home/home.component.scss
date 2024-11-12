@@ -1,0 +1,47 @@
+/* src/app/home.component.scss */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px); // Adjust for navbar height
+  padding-top: 64px; // Prevent content from hiding behind navbar
+
+  .loader {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+
+    mat-card-header {
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0;
+        line-height: 60px;
+      }
+      p {
+        font-size: 1.2em;
+        color: #555;
+      }
+    }
+
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.1em;
+    }
+
+    mat-progress-spinner {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="meme-container">
+  <mat-card class="card">
+    <mat-card-title>
+      {{ searchQuery }}
+    </mat-card-title>
+    <mat-card-content>
+      <div class="meme-image" id="meme">
+        <img [src]="image" alt="Meme Image" />
+        <div class="caption top-caption">{{ topText }}</div>
+        <div class="caption bottom-caption">{{ bottomText }}</div>
+        <!-- Watermark -->
+        <div class="watermark"> Pavel Polivka </div>
+      </div>
+      <!-- Loading Spinner -->
+      <mat-progress-spinner
+        *ngIf="isLoading"
+        mode="indeterminate"
+        diameter="40"
+      ></mat-progress-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="downloadMeme()">
+        Download Meme
+      </button>
+      <button mat-raised-button color="accent" (click)="regenerateMeme()">
+        Refresh Meme
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

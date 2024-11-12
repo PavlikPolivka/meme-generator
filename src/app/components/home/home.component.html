@@ -1,0 +1,34 @@
+<!-- src/app/home.component.html -->
+<div class="home-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>AI-Powered Meme Generator</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p>Create hilarious memes with AI-generated captions!</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="input-field">
+        <mat-label>Enter a topic or phrase</mat-label>
+        <input matInput [(ngModel)]="userInput" />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="generateMeme()"
+        [disabled]="isLoading || !userInput.trim()"
+      >
+        Generate Meme
+      </button>
+      <div class="loader">
+        <mat-progress-spinner
+          *ngIf="isLoading"
+          mode="indeterminate"
+          diameter="40"
+        ></mat-progress-spinner>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
